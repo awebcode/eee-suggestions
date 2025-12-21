@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diodes & Transistors - Final Exam Q&A</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 40px;
+        }
+        .section {
+            margin-bottom: 40px;
+            border-left: 5px solid #667eea;
+            padding-left: 20px;
+        }
+        .section-title {
+            font-size: 2em;
+            color: #1e3c72;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .section-title::before {
+            content: "📚";
+            margin-right: 10px;
+        }
+        .question {
+            background: #f8f9ff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .question h3 {
+            color: #2a5298;
+            margin-bottom: 12px;
+            font-size: 1.3em;
+        }
+        .answer {
+            color: #333;
+            margin-top: 10px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+        .answer ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        .answer li {
+            margin-bottom: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        tr:hover {
+            background: #f8f9ff;
+        }
+        .formula {
+            background: #fff3cd;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+            border-left: 4px solid #ffc107;
+            display: inline-block;
+        }
+        .svg-container {
+            text-align: center;
+            margin: 20px 0;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #e0e0e0;
+        }
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+        .note {
+            background: #d1ecf1;
+            border-left: 4px solid #0c5460;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            color: #0c5460;
+        }
+        .marks {
+            float: right;
+            background: #28a745;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⚡ Electronic Devices & Circuits</h1>
+            <p>Diodes & Transistors - Final Exam Preparation</p>
+            <p style="font-size: 0.9em; margin-top: 10px;">BSc CSE/EEE | Total Marks: 60</p>
+        </div>
+        
+        <div class="content">
+            
+            <!-- SECTION 1: DIODES -->
+            <div class="section">
+                <h2 class="section-title">Section A: Diodes</h2>
+                
+                <div class="question">
+                    <h3>Q1. Define a Diode. <span class="marks">2 Marks</span></h3>
+                    <div class="answer">
+                        <p><strong>Definition:</strong> A diode is a two-terminal semiconductor device that allows current to flow in only one direction (unidirectional conduction). It acts as an electronic check valve.</p>
+                        <div class="svg-container">
+                            <svg width="400" height="150" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                                        <polygon points="0 0, 10 3, 0 6" fill="#e74c3c" />
+                                    </marker>
+                                </defs>
+                                <!-- Diode Symbol -->
+                                <text x="200" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#2a5298">Diode Symbol</text>
+                                
+                                <!-- Anode Terminal -->
+                                <line x1="50" y1="75" x2="130" y2="75" stroke="#333" stroke-width="3"/>
+                                
+                                <!-- Triangle (Anode side) -->
+                                <polygon points="130,55 130,95 170,75" fill="#667eea" stroke="#333" stroke-width="2"/>
+                                
+                                <!-- Vertical bar (Cathode side) -->
+                                <rect x="170" y="55" width="4" height="40" fill="#333"/>
+                                
+                                <!-- Cathode Terminal -->
+                                <line x1="174" y1="75" x2="250" y2="75" stroke="#333" stroke-width="3"/>
+                                
+                                <!-- Labels -->
+                                <text x="90" y="55" text-anchor="middle" font-size="14" fill="#333" font-weight="bold">Anode</text>
+                                <text x="212" y="55" text-anchor="middle" font-size="14" fill="#333" font-weight="bold">Cathode</text>
+                                <text x="90" y="110" text-anchor="middle" font-size="13" fill="#666">(+)</text>
+                                <text x="212" y="110" text-anchor="middle" font-size="13" fill="#666">(-)</text>
+                                
+                                <!-- Current Direction Arrow -->
+                                <line x1="80" y1="130" x2="220" y2="130" stroke="#e74c3c" stroke-width="2.5" marker-end="url(#arrowhead)"/>
+                                <text x="150" y="125" text-anchor="middle" font-size="13" fill="#e74c3c" font-weight="bold">Current Flow (I)</text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q2. Types of Diodes. <span class="marks">3 Marks</span></h3>
+                    <div class="answer">
+                        <ul>
+                            <li><strong>PN Junction Diode:</strong> Basic diode for rectification</li>
+                            <li><strong>Zener Diode:</strong> Used for voltage regulation (reverse bias)</li>
+                            <li><strong>LED (Light Emitting Diode):</strong> Emits light when forward biased</li>
+                            <li><strong>Photodiode:</strong> Converts light to electrical current</li>
+                            <li><strong>Schottky Diode:</strong> Fast switching with low forward voltage drop</li>
+                            <li><strong>Tunnel Diode:</strong> Used in high-frequency applications</li>
+                            <li><strong>Varactor Diode:</strong> Voltage-controlled capacitor</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q3. Diode Characteristics (V-I Curve). <span class="marks">3 Marks</span></h3>
+                    <div class="answer">
+                        <p><strong>Three Regions:</strong></p>
+                        <ul>
+                            <li><span class="highlight">Forward Bias:</span> When V > 0.7V (Si) or 0.3V (Ge), diode conducts heavily</li>
+                            <li><span class="highlight">Reverse Bias:</span> Small leakage current (µA range)</li>
+                            <li><span class="highlight">Breakdown Region:</span> Reverse voltage exceeds breakdown voltage, current increases sharply</li>
+                        </ul>
+                        <div class="svg-container">
+                            <svg width="500" height="350" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                                        <polygon points="0 0, 10 3, 0 6" fill="#333" />
+                                    </marker>
+                                </defs>
+                                
+                                <!-- Title -->
+                                <text x="250" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#2a5298">Diode V-I Characteristic Curve</text>
+                                
+                                <!-- Axes -->
+                                <line x1="50" y1="175" x2="470" y2="175" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+                                <line x1="250" y1="320" x2="250" y2="50" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+                                
+                                <!-- Axis Labels -->
+                                <text x="480" y="180" font-size="14" fill="#333" font-weight="bold">V (Voltage)</text>
+                                <text x="255" y="45" font-size="14" fill="#333" font-weight="bold">I (Current)</text>
+                                
+                                <!-- Reverse Bias Region (flat line) -->
+                                <line x1="60" y1="175" x2="240" y2="172" stroke="#e74c3c" stroke-width="3" fill="none"/>
+                                
+                                <!-- Breakdown Region (sharp drop) -->
+                                <path d="M 60 175 L 50 280" stroke="#e74c3c" stroke-width="3" fill="none"/>
+                                
+                                <!-- Forward Bias Region (exponential rise) -->
+                                <path d="M 250 175 Q 260 175 265 170 Q 270 160 275 140 Q 280 110 285 90 L 300 70" 
+                                      stroke="#e74c3c" stroke-width="3" fill="none"/>
+                                
+                                <!-- Voltage markers -->
+                                <line x1="265" y1="175" x2="265" y2="180" stroke="#333" stroke-width="2"/>
+                                <text x="265" y="195" text-anchor="middle" font-size="12" fill="#333">0.7V</text>
+                                
+                                <line x1="100" y1="175" x2="100" y2="180" stroke="#333" stroke-width="2"/>
+                                <text x="100" y="195" text-anchor="middle" font-size="12" fill="#333">-Vbr</text>
+                                
+                                <!-- Region Labels -->
+                                <text x="150" y="160" font-size="13" fill="#e74c3c" font-weight="bold">Reverse Bias</text>
+                                <text x="340" y="80" font-size="13" fill="#e74c3c" font-weight="bold">Forward Bias</text>
+                                <text x="70" y="310" font-size="13" fill="#e74c3c" font-weight="bold">Breakdown</text>
+                                
+                                <!-- Annotations -->
+                                <text x="320" y="120" font-size="11" fill="#666">(High current)</text>
+                                <text x="130" y="165" font-size="11" fill="#666">(Leakage current ≈ 0)</text>
+                                
+                                <!-- Dashed helper lines -->
+                                <line x1="265" y1="90" x2="265" y2="175" stroke="#999" stroke-width="1" stroke-dasharray="3,3"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q4. Applications of Diodes. <span class="marks">2 Marks</span></h3>
+                    <div class="answer">
+                        <ul>
+                            <li><strong>Rectification:</strong> AC to DC conversion</li>
+                            <li><strong>Voltage Regulation:</strong> Using Zener diodes</li>
+                            <li><strong>Signal Clipping & Clamping:</strong> Signal shaping</li>
+                            <li><strong>Protection Circuits:</strong> Reverse polarity protection</li>
+                            <li><strong>Demodulation:</strong> Extracting signals from modulated waves</li>
+                            <li><strong>Switching:</strong> Fast switching applications</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SECTION 2: TRANSISTORS -->
+            <div class="section">
+                <h2 class="section-title">Section B: Transistors (BJT)</h2>
+                
+                <div class="question">
+                    <h3>Q5. Define BJT (Bipolar Junction Transistor) with Symbol. <span class="marks">3 Marks</span></h3>
+                    <div class="answer">
+                        <p><strong>Definition:</strong> A BJT is a three-terminal semiconductor device consisting of two PN junctions. It has three regions: Emitter (E), Base (B), and Collector (C). Current flow involves both electrons and holes (bipolar).</p>
+                        <div class="svg-container">
+                            <svg width="700" height="280" xmlns="http://www.w3.org/2000/svg">
+                                <!-- NPN Transistor -->
+                                <g transform="translate(150, 50)">
+                                    <text x="0" y="-15" text-anchor="middle" font-size="18" font-weight="bold" fill="#2a5298">NPN Transistor</text>
+                                    
+                                    <!-- Base vertical line -->
+                                    <line x1="0" y1="20" x2="0" y2="140" stroke="#333" stroke-width="4"/>
+                                    
+                                    <!-- Base terminal -->
+                                    <line x1="-60" y1="80" x2="0" y2="80" stroke="#333" stroke-width="3"/>
+                                    
+                                    <!-- Collector line -->
+                                    <line x1="0" y1="40" x2="60" y2="20" stroke="#333" stroke-width="3"/>
+                                    
+                                    <!-- Emitter line -->
+                                    <line x1="0" y1="120" x2="60" y2="140" stroke="#333" stroke-width="3"/>
+                                    
+                                    <!-- Arrow on Emitter (pointing OUT for NPN) -->
+                                    <polygon points="50,130 60,140 55,142" fill="#333"/>
+                                    
+                                    <!-- Terminal Labels -->
+                                    <text x="-70" y="85" font-size="16" fill="#333" font-weight="bold">B</text>
+                                    <text x="70" y="20" font-size="16" fill="#333" font-weight="bold">C</text>
+                                    <text x="70" y="145" font-size="16" fill="#333" font-weight="bold">E</text>
+                                    
+                                    <!-- Circle enclosure -->
+                                    <circle cx="0" cy="80" r="65" stroke="#667eea" stroke-width="2.5" fill="none"/>
+                                    
+                                    <!-- Full names -->
+                                    <text x="-100" y="195" font-size="12" fill="#666">Base</text>
+                                    <text x="55" y="-5" font-size="12" fill="#666">Collector</text>
+                                    <text x="55" y="170" font-size="12" fill="#666">Emitter</text>
+                                </g>
+                                
+                                <!-- PNP Transistor -->
+                                <g transform="translate(500, 50)">
+                                    <text x="0" y="-15" text-anchor="middle" font-size="18" font-weight="bold" fill="#2a5298">PNP Transistor</text>
+                                    
+                                    <!-- Base vertical line -->
+                                    <line x1="0" y1="20" x2="0" y2="140" stroke="#333" stroke-width="4"/>
+                                    
+                                    <!-- Base terminal -->
+                                    <line x1="-60" y1="80" x2="0" y2="80" stroke="#333" stroke-width="3"/>
+                                    
+                                    <!-- Collector line -->
+                                    <line x1="0" y1="40" x2="60" y2="20" stroke="#333" stroke-width="3"/>
+                                    
+                                    <!-- Emitter line -->
+                                    <line x1="0" y1="120" x2="60" y2="140" stroke="#333" stroke-width="3"/>
+                                    
+                                    <!-- Arrow on Collector (pointing IN for PNP) -->
+                                    <polygon points="0,40 10,25 5,25" fill="#333"/>
+                                    
+                                    <!-- Terminal Labels -->
+                                    <text x="-70" y="85" font-size="16" fill="#333" font-weight="bold">B</text>
+                                    <text x="70" y="20" font-size="16" fill="#333" font-weight="bold">C</text>
+                                    <text x="70" y="145" font-size="16" fill="#333" font-weight="bold">E</text>
+                                    
+                                    <!-- Circle enclosure -->
+                                    <circle cx="0" cy="80" r="65" stroke="#667eea" stroke-width="2.5" fill="none"/>
+                                    
+                                    <!-- Full names -->
+                                    <text x="-100" y="195" font-size="12" fill="#666">Base</text>
+                                    <text x="55" y="-5" font-size="12" fill="#666">Collector</text>
+                                    <text x="55" y="170" font-size="12" fill="#666">Emitter</text>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="note">
+                            <strong>Note:</strong> Arrow on emitter indicates conventional current direction. NPN: arrow points OUT, PNP: arrow points IN.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q6. BJT Configurations. <span class="marks">4 Marks</span></h3>
+                    <div class="answer">
+                        <p>Three basic configurations based on which terminal is common:</p>
+                        
+                        <table>
+                            <tr>
+                                <th>Configuration</th>
+                                <th>Input</th>
+                                <th>Output</th>
+                                <th>Current Gain</th>
+                                <th>Voltage Gain</th>
+                                <th>Applications</th>
+                            </tr>
+                            <tr>
+                                <td><strong>Common Emitter (CE)</strong></td>
+                                <td>Base-Emitter</td>
+                                <td>Collector-Emitter</td>
+                                <td>High (β)</td>
+                                <td>High</td>
+                                <td>Amplifiers, Switching</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Common Base (CB)</strong></td>
+                                <td>Emitter-Base</td>
+                                <td>Collector-Base</td>
+                                <td>Low (&lt;1)</td>
+                                <td>High</td>
+                                <td>High-frequency amplifiers</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Common Collector (CC)</strong></td>
+                                <td>Base-Collector</td>
+                                <td>Emitter-Collector</td>
+                                <td>High</td>
+                                <td>Low (&lt;1)</td>
+                                <td>Impedance matching, Buffers</td>
+                            </tr>
+                        </table>
+                        
+                        <div class="svg-container">
+                            <svg width="800" height="280" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Common Emitter Configuration -->
+                                <g transform="translate(100, 140)">
+                                    <text x="0" y="-80" text-anchor="middle" font-size="16" font-weight="bold" fill="#2a5298">Common Emitter (CE)</text>
+                                    
+                                    <!-- Base vertical line -->
+                                    <line x1="0" y1="-40" x2="0" y2="40" stroke="#333" stroke-width="3"/>
+                                    
+                                    <!-- Input from Base -->
+                                    <line x1="-50" y1="-10" x2="0" y2="-10" stroke="#e74c3c" stroke-width="2.5"/>
+                                    <text x="-60" y="-5" font-size="12" fill="#e74c3c" font-weight="bold">Vin</text>
+                                    
+                                    <!-- Collector line -->
+                                    <line x1="0" y1="-30" x2="50" y2="-50" stroke="#333" stroke-width="2.5"/>
+                                    
+                                    <!-- Output from Collector -->
+                                    <line x1="50" y1="-50" x2="70" y2="-50" stroke="#27ae60" stroke-width="2.5"/>
+                                    <text x="75" y="-45" font-size="12" fill="#27ae60" font-weight="bold">Vout</text>
+                                    
+                                    <!-- Emitter line -->
+                                    <line x1="0" y1="20" x2="50" y2="40" stroke="#333" stroke-width="2.5"/>
+                                    <polygon points="42,32 50,40 47,42" fill="#333"/>
+                                    
+                                    <!-- Ground at Emitter -->
+                                    <line x1="50" y1="40" x2="50" y2="60" stroke="#333" stroke-width="2"/>
+                                    <line x1="35" y1="60" x2="65" y2="60" stroke="#333" stroke-width="3"/>
+                                    <line x1="40" y1="65" x2="60" y2="65" stroke="#333" stroke-width="2"/>
+                                    <line x1="45" y1="70" x2="55" y2="70" stroke="#333" stroke-width="1.5"/>
+                                    
+                                    <text x="0" y="95" text-anchor="middle" font-size="11" fill="#666">(Emitter Grounded)</text>
+                                </g>
+                                
+                                <!-- Common Base Configuration -->
+                                <g transform="translate(370, 140)">
+                                    <text x="0" y="-80" text-anchor="middle" font-size="16" font-weight="bold" fill="#2a5298">Common Base (CB)</text>
+                                    
+                                    <!-- Base vertical line -->
+                                    <line x1="0" y1="-40" x2="0" y2="40" stroke="#333" stroke-width="3"/>
+                                    
+                                    <!-- Ground at Base -->
+                                    <line x1="0" y1="-10" x2="-30" y2="-10" stroke="#333" stroke-width="2"/>
+                                    <line x1="-30" y1="-10" x2="-30" y2="-30" stroke="#333" stroke-width="2"/>
+                                    <line x1="-45" y1="-30" x2="-15" y2="-30" stroke="#333" stroke-width="3"/>
+                                    <line x1="-40" y1="-35" x2="-20" y2="-35" stroke="#333" stroke-width="2"/>
+                                    
+                                    <!-- Collector line -->
+                                    <line x1="0" y1="-30" x2="50" y2="-50" stroke="#333" stroke-width="2.5"/>
+                                    
+                                    <!-- Output from Collector -->
+                                    <line x1="50" y1="-50" x2="70" y2="-50" stroke="#27ae60" stroke-width="2.5"/>
+                                    <text x="75" y="-45" font-size="12" fill="#27ae60" font-weight="bold">Vout</text>
+                                    
+                                    <!-- Emitter line -->
+                                    <line x1="0" y1="20" x2="50" y2="40" stroke="#333" stroke-width="2.5"/>
+                                    <polygon points="42,32 50,40 47,42" fill="#333"/>
+                                    
+                                    <!-- Input from Emitter -->
+                                    <line x1="50" y1="40" x2="50" y2="60" stroke="#e74c3c" stroke-width="2.5"/>
+                                    <text x="55" y="60" font-size="12" fill="#e74c3c" font-weight="bold">Vin</text>
+                                    
+                                    <text x="0" y="95" text-anchor="middle" font-size="11" fill="#666">(Base Grounded)</text>
+                                </g>
+                                
+                                <!-- Common Collector Configuration -->
+                                <g transform="translate(640, 140)">
+                                    <text x="0" y="-80" text-anchor="middle" font-size="16" font-weight="bold" fill="#2a5298">Common Collector (CC)</text>
+                                    
+                                    <!-- Base vertical line -->
+                                    <line x1="0" y1="-40" x2="0" y2="40" stroke="#333" stroke-width="3"/>
+                                    
+                                    <!-- Input from Base -->
+                                    <line x1="-50" y1="-10" x2="0" y2="-10" stroke="#e74c3c" stroke-width="2.5"/>
+                                    <text x="-60" y="-5" font-size="12" fill="#e74c3c" font-weight="bold">Vin</text>
+                                    
+                                    <!-- Collector line -->
+                                    <line x1="0" y1="-30" x2="50" y2="-50" stroke="#333" stroke-width="2.5"/>
+                                    
+                                    <!-- Ground at Collector -->
+                                    <line x1="50" y1="-50" x2="50" y2="-70" stroke="#333" stroke-width="2"/>
+                                    <line x1="35" y1="-70" x2="65" y2="-70" stroke="#333" stroke-width="3"/>
+                                    <line x1="40" y1="-75" x2="60" y2="-75" stroke="#333" stroke-width="2"/>
+                                    <line x1="45" y1="-80" x2="55" y2="-80" stroke="#333" stroke-width="1.5"/>
+                                    
+                                    <!-- Emitter line -->
+                                    <line x1="0" y1="20" x2="50" y2="40" stroke="#333" stroke-width="2.5"/>
+                                    <polygon points="42,32 50,40 47,42" fill="#333"/>
+                                    
+                                    <!-- Output from Emitter -->
+                                    <line x1="50" y1="40" x2="70" y2="40" stroke="#27ae60" stroke-width="2.5"/>
+                                    <text x="75" y="45" font-size="12" fill="#27ae60" font-weight="bold">Vout</text>
+                                    
+                                    <text x="0" y="95" text-anchor="middle" font-size="11" fill="#666">(Collector Grounded)</text>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q7. BJT Operating Modes (Junction Biases). <span class="marks">4 Marks</span></h3>
+                    <div class="answer">
+                        <p>BJT has two junctions: Emitter-Base (EB) and Collector-Base (CB). Four operating modes:</p>
+                        
+                        <table>
+                            <tr>
+                                <th>Operating Mode</th>
+                                <th>EB Junction</th>
+                                <th>CB Junction</th>
+                                <th>Application</th>
+                            </tr>
+                            <tr>
+                                <td><strong>Active/Linear</strong></td>
+                                <td>Forward Biased</td>
+                                <td>Reverse Biased</td>
+                                <td>Amplification</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Saturation</strong></td>
+                                <td>Forward Biased</td>
+                                <td>Forward Biased</td>
+                                <td>ON switch (Digital)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Cutoff</strong></td>
+                                <td>Reverse Biased</td>
+                                <td>Reverse Biased</td>
+                                <td>OFF switch (Digital)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Inverse Active</strong></td>
+                                <td>Reverse Biased</td>
+                                <td>Forward Biased</td>
+                                <td>Rarely used</td>
+                            </tr>
+                        </table>
+                        
+                        <div class="note">
+                            <strong>Most Important:</strong> Active mode for amplifiers, Saturation & Cutoff for switching circuits.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q8. Types of Transistors. <span class="marks">2 Marks</span></h3>
+                    <div class="answer">
+                        <ul>
+                            <li><strong>BJT (Bipolar Junction Transistor):</strong>
+                                <ul>
+                                    <li>NPN Transistor</li>
+                                    <li>PNP Transistor</li>
+                                </ul>
+                            </li>
+                            <li><strong>FET (Field Effect Transistor):</strong>
+                                <ul>
+                                    <li>JFET (Junction FET) - N-channel, P-channel</li>
+                                    <li>MOSFET (Metal Oxide Semiconductor FET)
+                                        <ul>
+                                            <li>Enhancement Mode (E-MOSFET)</li>
+                                            <li>Depletion Mode (D-MOSFET)</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q9. Characteristics of BJT. <span class="marks">3 Marks</span></h3>
+                    <div class="answer">
+                        <p><strong>Key Characteristics:</strong></p>
+                        <ul>
+                            <li><strong>Current-controlled device:</strong> IC depends on IB</li>
+                            <li><strong>Low input impedance:</strong> Few hundred ohms</li>
+                            <li><strong>High output impedance:</strong> Several kΩ</li>
+                            <li><strong>Temperature sensitive:</strong> Performance varies with temperature</li>
+                            <li><strong>Power consumption:</strong> Higher than FET</li>
+                            <li><strong>Switching speed:</strong> Moderate (slower than MOSFET)</li>
+                            <li><strong>Gain (β):</strong> Typically 50-200</li>
+                        </ul>
+                        
+                        <p><strong>Three Main Characteristics:</strong></p>
+                        <ul>
+                            <li><strong>Input Characteristics:</strong> IB vs VBE (VCE constant)</li>
+                            <li><strong>Output Characteristics:</strong> IC vs VCE (IB constant)</li>
+                            <li><strong>Transfer Characteristics:</strong> IC vs IB (VCE constant)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q10. Applications of Transistors. <span class="marks">2 Marks</span></h3>
+                    <div class="answer">
+                        <ul>
+                            <li><strong>Amplification:</strong> Audio, RF, and power amplifiers</li>
+                            <li><strong>Switching:</strong> Digital circuits, logic gates</li>
+                            <li><strong>Oscillators:</strong> Signal generation</li>
+                            <li><strong>Voltage Regulation:</strong> Power supplies</li>
+                            <li><strong>Signal Processing:</strong> Modulation, demodulation</li>
+                            <li><strong>Motor Control:</strong> Speed and direction control</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SECTION 3: MOSFET -->
+            <div class="section">
+                <h2 class="section-title">Section C: MOSFET</h2>
+                
+                <div class="question">
+                    <h3>Q11. Define MOSFET with Symbol. <span class="marks">3 Marks</span></h3>
+                    <div class="answer">
+                        <p><strong>Definition:</strong> MOSFET (Metal Oxide Semiconductor Field Effect Transistor) is a voltage-controlled three-terminal device with Gate (G), Drain (D), and Source (S). Current flow is controlled by electric field.</p>
+                        
+                        <div class="svg-container">
+                            <svg width="750" height="320" xmlns="http://www.w3.org/2000/svg">
+                                <!-- N-Channel Enhancement MOSFET -->
+                                <g transform="translate(150, 160)">
+                                    <text x="0" y="-105" text-anchor="middle" font-size="16" font-weight="bold" fill="#2a5298">N-Channel Enhancement</text>
+                                    
+                                    <!-- Vertical channel bar (broken for enhancement) -->
+                                    <rect x="-3" y="-50" width="6" height="25" fill="#333"/>
+                                    <rect x="-3" y="-15" width="6" height="10" fill="#333"/>
+                                    <rect x="-3" y="5" width="6" height="10" fill="#333"/>
+                                    <rect x="-3" y="25" width="6" height="25" fill="#333"/>
+                                    
+                                    <!-- Gate terminal -->
+                                    <line x1="-60" y1="0" x2="-15" y2="0" stroke="#333" stroke-width="3"/>
+                                    <text x="-75" y="5" font-size="15" fill="#333" font-weight="bold">G</text>
+                                    
+                                    <!-- Gate line (closer to channel) -->
+                                    <line x1="-15" y1="-60" x2="-15" y2="60" stroke="#333" stroke-width="2.5"/>
+                                    
+                                    <!-- Drain connections -->
+                                    <line x1="3" y1="-37" x2="30" y2="-37" stroke="#333" stroke-width="2.5"/>
+                                    <line x1="30" y1="-37" x2="30" y2="-70" stroke="#333" stroke-width="2.5"/>
+                                    <line x1="30" y1="-70" x2="60" y2="-70" stroke="#333" stroke-width="3"/>
+                                    <text x="70" y="-65" font-size="15" fill="#333" font-weight="bold">D</text>
+                                    
+                                    <!-- Source connections -->
+                                    <line x1="3" y1="37" x2="30" y2="37" stroke="#333" stroke-width="2.5"/>
+                                    <line x1="30" y1="37" x2="30" y2="70" stroke="#333" stroke-width="2.5"/>
+                                    <line x1="30" y1="70" x2="60" y2="70" stroke="#333" stroke-width="3"/>
+                                    <text x="70" y="75" font-size="15" fill="#333" font-weight="bold">S</text>
+                                    
+                                    <!-- Body/Substrate connection (arrow to source) -->
+                                    <line x1="30" y1="0" x2="30" y2="37" stroke="#333" stroke-width="2"/>
+                                    <polygon points="30,30 27,37 33,37" fill="#333"/>
+                                    
+                                    <!-- Circle -->
+                                    <circle cx="0" cy="0" r="85" stroke="#667eea" stroke-width="2.5" fill="none"/>
+                                    
+                                    <!-- Labels -->
+                                    <text x="0" y="115" text-anchor="middle" font-size="11" fill="#666">Drain</text>
+                                    <text x="-70" y="115" text-anchor="middle" font-size="11" fill="#666">Gate</text>
+                                    <text x="70" y="115" text-anchor="middle" font-size="11" fill="#666">Source</text>
+                                </g>
+                                
+                                <!-- P-Channel Enhancement MOSFET -->
+                                <g transform="translate(530, 160)">
+                                    <text x="0" y="-105" text-anchor="middle" font-size="16" font-weight="bold" fill="#2a5298">P-Channel Enhancement</text>
+                                    
+                                    <!-- Vertical channel bar (broken for enhancement) -->
+                                    <rect x="-3" y="-50" width="6" height="25" fill="#333"/>
+                                    <rect x="-3" y="-15" width="6" height="10" fill="#333"/>
+                                    <rect x="-3" y="5" width="6" height="10" fill="#333"/>
+                                    <rect x="-3" y="25" width="6" height="25" fill="#333"/>
+                                    
+                                    <!-- Gate terminal -->
+                                    <line x1="-60" y1="0" x2="-15" y2="0" stroke="#333" stroke-width="3"/>
+                                    <text x="-75" y="5" font-size="15" fill="#333" font-weight="bold">G</text>
+                                    
+                                    <!-- Gate line (closer to channel) -->
+                                    <line x1="-15" y1="-60" x2="-15" y2="60" stroke="#333" stroke-width="2.5"/>
+                                    
+                                    <!-- Drain connections -->
+                                    <line x1="3" y1="-37" x2="30" y2="-37" stroke="#333" stroke-width="2.5"/>
+                                    <line x1="30" y1="-37" x2="30" y2="-70" stroke="#333" stroke-width="2.5"/>
+                                    <line x1="30" y1="-70" x2="60" y2="-70" stroke="#333" stroke-width="3"/>
+                                    <text x="70" y="-65" font-size="15" fill="#333" font-weight="bold">D</text>
+                                    
+                                    <!-- Source connections -->
+                                    <line x1="3" y1="37" x2="30" y2="37" stroke="#333" stroke-width="2.5"/>
+                                    <line x1="30" y1="37" x2="30" y2="70" stroke="#333" stroke-width="2.5"/>
+                                    <line x1="30" y1="70" x2="60" y2="70" stroke="#333" stroke-width="3"/>
+                                    <text x="70" y="75" font-size="15" fill="#333" font-weight="bold">S</text>
+                                    
+                                    <!-- Body/Substrate connection (arrow pointing IN for P-channel) -->
+                                    <line x1="30" y1="0" x2="30" y2="37" stroke="#333" stroke-width="2"/>
+                                    <polygon points="30,7 27,0 33,0" fill="#333"/>
+                                    
+                                    <!-- Circle -->
+                                    <circle cx="0" cy="0" r="85" stroke="#667eea" stroke-width="2.5" fill="none"/>
+                                    
+                                    <!-- Labels -->
+                                    <text x="0" y="115" text-anchor="middle" font-size="11" fill="#666">Drain</text>
+                                    <text x="-70" y="115" text-anchor="middle" font-size="11" fill="#666">Gate</text>
+                                    <text x="70" y="115" text-anchor="middle" font-size="11" fill="#666">Source</text>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="note">
+                            <strong>Note:</strong> Enhancement mode has broken channel (dashed lines). Arrow direction: N-channel points toward channel, P-channel points away.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q12. BJT vs MOSFET Comparison. <span class="marks">5 Marks</span></h3>
+                    <div class="answer">
+                        <table>
+                            <tr>
+                                <th>Parameter</th>
+                                <th>BJT</th>
+                                <th>MOSFET</th>
+                            </tr>
+                            <tr>
+                                <td><strong>Control Type</strong></td>
+                                <td>Current-controlled (IB controls IC)</td>
+                                <td>Voltage-controlled (VGS controls ID)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Terminals</strong></td>
+                                <td>Emitter, Base, Collector</td>
+                                <td>Source, Gate, Drain</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Input Impedance</strong></td>
+                                <td>Low (few hundred Ω)</td>
+                                <td>Very High (MΩ range)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Current Flow</strong></td>
+                                <td>Bipolar (electrons & holes)</td>
+                                <td>Unipolar (electrons or holes)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Switching Speed</strong></td>
+                                <td>Moderate</td>
+                                <td>Fast</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Power Consumption</strong></td>
+                                <td>Higher</td>
+                                <td>Lower</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Temperature Stability</strong></td>
+                                <td>Less stable</td>
+                                <td>More stable</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Noise</strong></td>
+                                <td>Higher</td>
+                                <td>Lower</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Size</strong></td>
+                                <td>Larger</td>
+                                <td>Smaller (IC applications)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Cost</strong></td>
+                                <td>Lower</td>
+                                <td>Higher</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Applications</strong></td>
+                                <td>Audio amplifiers, linear circuits</td>
+                                <td>Digital circuits, switching, VLSI</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SECTION 4: MATHEMATICAL PROBLEMS -->
+            <div class="section">
+                <h2 class="section-title">Section D: Problem Solving</h2>
+                
+                <div class="question">
+                    <h3>Q13. Given: α = 0.95, IC = 1.9 mA. Find β, IE, and IB. <span class="marks">5 Marks</span></h3>
+                    <div class="answer">
+                        <p><strong>Given:</strong></p>
+                        <ul>
+                            <li>Amplification factor (α) = 0.95</li>
+                            <li>Collector current (IC) = 1.9 mA</li>
+                        </ul>
+                        
+                        <p><strong>Formulas:</strong></p>
+                        <div class="formula">α = IC / IE</div>
+                        <div class="formula">β = IC / IB</div>
+                        <div class="formula">β = α / (1 - α)</div>
+                        <div class="formula">IE = IB + IC</div>
+                        
+                        <p><strong>Solution:</strong></p>
+                        
+                        <p><strong>Step 1: Find Current Gain (β)</strong></p>
+                        <div class="formula">
+                            β = α / (1 - α) = 0.95 / (1 - 0.95) = 0.95 / 0.05 = <strong>19</strong>
+                        </div>
+                        
+                        <p><strong>Step 2: Find Base Current (IB)</strong></p>
+                        <div class="formula">
+                            IB = IC / β = 1.9 mA / 19 = <strong>0.1 mA = 100 µA</strong>
+                        </div>
+                        
+                        <p><strong>Step 3: Find Emitter Current (IE)</strong></p>
+                        <div class="formula">
+                            IE = IB + IC = 0.1 + 1.9 = <strong>2.0 mA</strong>
+                        </div>
+                        
+                        <p><strong>OR using α:</strong></p>
+                        <div class="formula">
+                            IE = IC / α = 1.9 / 0.95 = <strong>2.0 mA</strong>
+                        </div>
+                        
+                        <div class="note">
+                            <strong>Answer:</strong> β = 19, IE = 2.0 mA, IB = 0.1 mA (100 µA)
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q14. Given: β = 50, VCC = 12V, RB = 240 kΩ, RC = 2.2 kΩ (Silicon). Find IB, IC, VCE, VB, VC, VBC. <span class="marks">8 Marks</span></h3>
+                    <div class="answer">
+                        <div class="svg-container">
+                            <svg width="500" height="450" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <marker id="currentArrow" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+                                        <polygon points="0 0, 8 3, 0 6" fill="#e74c3c" />
+                                    </marker>
+                                </defs>
+                                
+                                <!-- Title -->
+                                <text x="250" y="25" text-anchor="middle" font-size="18" font-weight="bold" fill="#2a5298">Common Emitter BJT Circuit</text>
+                                
+                                <!-- VCC Supply Line -->
+                                <line x1="80" y1="60" x2="380" y2="60" stroke="#e74c3c" stroke-width="3"/>
+                                <text x="230" y="50" text-anchor="middle" font-size="16" fill="#e74c3c" font-weight="bold">+ VCC = 12V</text>
+                                
+                                <!-- RC Resistor (vertical) -->
+                                <rect x="340" y="70" width="40" height="80" fill="none" stroke="#333" stroke-width="2.5" rx="3"/>
+                                <line x1="360" y1="60" x2="360" y2="70" stroke="#333" stroke-width="3"/>
+                                <line x1="360" y1="150" x2="360" y2="180" stroke="#333" stroke-width="3"/>
+                                <text x="395" y="115" font-size="14" fill="#333" font-weight="bold">RC</text>
+                                <text x="390" y="132" font-size="13" fill="#333">2.2kΩ</text>
+                                
+                                <!-- IC Current Arrow -->
+                                <line x1="345" y1="165" x2="345" y2="195" stroke="#e74c3c" stroke-width="2" marker-end="url(#currentArrow)"/>
+                                <text x="325" y="185" font-size="13" fill="#e74c3c" font-weight="bold">IC</text>
+                                
+                                <!-- RB Resistor (vertical) -->
+                                <rect x="80" y="100" width="40" height="100" fill="none" stroke="#333" stroke-width="2.5" rx="3"/>
+                                <line x1="100" y1="60" x2="100" y2="100" stroke="#333" stroke-width="3"/>
+                                <line x1="100" y1="200" x2="100" y2="240" stroke="#333" stroke-width="3"/>
+                                <text x="45" y="155" font-size="14" fill="#333" font-weight="bold">RB</text>
+                                <text x="37" y="172" font-size="13" fill="#333">240kΩ</text>
+                                
+                                <!-- IB Current Arrow -->
+                                <line x1="85" y1="220" x2="85" y2="250" stroke="#e74c3c" stroke-width="2" marker-end="url(#currentArrow)"/>
+                                <text x="65" y="240" font-size="13" fill="#e74c3c" font-weight="bold">IB</text>
+                                
+                                <!-- Base Connection -->
+                                <line x1="100" y1="240" x2="240" y2="240" stroke="#333" stroke-width="3"/>
+                                
+                                <!-- Transistor (NPN) -->
+                                <!-- Base vertical line -->
+                                <line x1="240" y1="200" x2="240" y2="300" stroke="#333" stroke-width="4"/>
+                                
+                                <!-- Collector line -->
+                                <line x1="240" y1="220" x2="360" y2="180" stroke="#333" stroke-width="3"/>
+                                
+                                <!-- Emitter line -->
+                                <line x1="240" y1="280" x2="360" y2="320" stroke="#333" stroke-width="3"/>
+                                <!-- Emitter arrow -->
+                                <polygon points="340,310 360,320 345,323" fill="#333"/>
+                                
+                                <!-- Emitter to Ground -->
+                                <line x1="360" y1="320" x2="360" y2="380" stroke="#333" stroke-width="3"/>
+                                
+                                <!-- Ground Symbol -->
+                                <line x1="320" y1="380" x2="400" y2="380" stroke="#333" stroke-width="4"/>
+                                <line x1="330" y1="390" x2="390" y2="390" stroke="#333" stroke-width="3"/>
+                                <line x1="340" y1="400" x2="380" y2="400" stroke="#333" stroke-width="2"/>
+                                
+                                <!-- Voltage Labels -->
+                                <text x="220" y="235" font-size="14" fill="#2a5298" font-weight="bold">VB</text>
+                                <circle cx="230" cy="240" r="4" fill="#2a5298"/>
+                                
+                                <text x="370" y="175" font-size="14" fill="#2a5298" font-weight="bold">VC</text>
+                                <circle cx="360" cy="180" r="4" fill="#2a5298"/>
+                                
+                                <text x="370" y="355" font-size="14" fill="#666" font-weight="bold">VE = 0V</text>
+                                
+                                <!-- VCE Label -->
+                                <line x1="420" y1="240" x2="420" y2="340" stroke="#9b59b6" stroke-width="2" stroke-dasharray="5,5"/>
+                                <text x="430" y="295" font-size="14" fill="#9b59b6" font-weight="bold">VCE</text>
+                                
+                                <!-- Node labels for clarity -->
+                                <text x="145" y="255" font-size="12" fill="#666">Base</text>
+                                <text x="370" y="200" font-size="12" fill="#666">Collector</text>
+                                <text x="370" y="335" font-size="12" fill="#666">Emitter</text>
+                            </svg>
+                        </div>
+                        
+                        <p><strong>Given:</strong></p>
+                        <ul>
+                            <li>β = 50</li>
+                            <li>VCC = 12V</li>
+                            <li>RB = 240 kΩ</li>
+                            <li>RC = 2.2 kΩ</li>
+                            <li>VBE = 0.7V (Silicon)</li>
+                        </ul>
+                        
+                        <p><strong>Solution:</strong></p>
+                        
+                        <p><strong>Step 1: Find Base Current (IB)</strong></p>
+                        <p>Applying KVL to base-emitter loop:</p>
+                        <div class="formula">
+                            VCC = IB × RB + VBE
+                        </div>
+                        <div class="formula">
+                            IB = (VCC - VBE) / RB = (12 - 0.7) / 240×10³
+                        </div>
+                        <div class="formula">
+                            IB = 11.3 / 240000 = <strong>47.08 µA ≈ 47 µA</strong>
+                        </div>
+                        
+                        <p><strong>Step 2: Find Collector Current (IC)</strong></p>
+                        <div class="formula">
+                            IC = β × IB = 50 × 47×10⁻⁶
+                        </div>
+                        <div class="formula">
+                            IC = <strong>2.35 mA</strong>
+                        </div>
+                        
+                        <p><strong>Step 3: Find Collector-Emitter Voltage (VCE)</strong></p>
+                        <p>Applying KVL to collector-emitter loop:</p>
+                        <div class="formula">
+                            VCC = IC × RC + VCE + VE
+                        </div>
+                        <div class="formula">
+                            VCE = VCC - IC × RC (since VE = 0)
+                        </div>
+                        <div class="formula">
+                            VCE = 12 - (2.35×10⁻³ × 2.2×10³)
+                        </div>
+                        <div class="formula">
+                            VCE = 12 - 5.17 = <strong>6.83V</strong>
+                        </div>
+                        
+                        <p><strong>Step 4: Find Base Voltage (VB)</strong></p>
+                        <div class="formula">
+                            VB = VBE + VE = 0.7 + 0 = <strong>0.7V</strong>
+                        </div>
+                        
+                        <p><strong>Step 5: Find Collector Voltage (VC)</strong></p>
+                        <div class="formula">
+                            VC = VCE + VE = 6.83 + 0 = <strong>6.83V</strong>
+                        </div>
+                        
+                        <p><strong>Step 6: Find Base-Collector Voltage (VBC)</strong></p>
+                        <div class="formula">
+                            VBC = VB - VC = 0.7 - 6.83 = <strong>-6.13V</strong>
+                        </div>
+                        
+                        <div class="note">
+                            <strong>Final Answers:</strong><br>
+                            IB = 47 µA<br>
+                            IC = 2.35 mA<br>
+                            VCE = 6.83V<br>
+                            VB = 0.7V<br>
+                            VC = 6.83V<br>
+                            VBC = -6.13V (Reverse biased, confirms active mode)
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q15. Additional Important Formulas. <span class="marks">2 Marks</span></h3>
+                    <div class="answer">
+                        <p><strong>Current Relations:</strong></p>
+                        <div class="formula">IE = IB + IC</div>
+                        <div class="formula">IC = β × IB</div>
+                        <div class="formula">IC = α × IE</div>
+                        <div class="formula">α = β / (β + 1)</div>
+                        <div class="formula">β = α / (1 - α)</div>
+                        
+                        <p><strong>Typical Values:</strong></p>
+                        <ul>
+                            <li>α: 0.95 to 0.99</li>
+                            <li>β: 20 to 200</li>
+                            <li>VBE (Silicon): 0.7V</li>
+                            <li>VBE (Germanium): 0.3V</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SECTION 5: ADDITIONAL IMPORTANT TOPICS -->
+            <div class="section">
+                <h2 class="section-title">Section E: Additional Topics</h2>
+                
+                <div class="question">
+                    <h3>Q16. Transistor as an Amplifier. <span class="marks">3 Marks</span></h3>
+                    <div class="answer">
+                        <p>In active region, small changes in base current cause large changes in collector current.</p>
+                        <ul>
+                            <li><strong>Voltage Gain (AV):</strong> AV = Vout / Vin = -β × (RC / Rin)</li>
+                            <li><strong>Current Gain (AI):</strong> AI = IC / IB = β</li>
+                            <li><strong>Power Gain (AP):</strong> AP = AV × AI</li>
+                        </ul>
+                        <p>CE configuration provides both voltage and current gain, making it most popular for amplification.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q17. Transistor as a Switch. <span class="marks">3 Marks</span></h3>
+                    <div class="answer">
+                        <p>Transistor operates between cutoff (OFF) and saturation (ON):</p>
+                        <ul>
+                            <li><strong>Cutoff Mode (OFF):</strong> IB = 0, IC ≈ 0, VCE ≈ VCC (Open switch)</li>
+                            <li><strong>Saturation Mode (ON):</strong> IB is large, IC = VCC/RC, VCE ≈ 0.2V (Closed switch)</li>
+                        </ul>
+                        <p><strong>Applications:</strong> Digital logic gates, relay drivers, LED drivers, motor control</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q18. Biasing Techniques. <span class="marks">2 Marks</span></h3>
+                    <div class="answer">
+                        <ul>
+                            <li><strong>Fixed Bias:</strong> Simple but temperature unstable</li>
+                            <li><strong>Voltage Divider Bias:</strong> Most stable, widely used</li>
+                            <li><strong>Emitter Bias:</strong> Good stability with negative supply</li>
+                            <li><strong>Collector Feedback Bias:</strong> Moderate stability</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q19. Early Effect in BJT. <span class="marks">2 Marks</span></h3>
+                    <div class="answer">
+                        <p>As VCE increases, collector-base depletion width increases, reducing effective base width. This causes IC to increase slightly with VCE even in active region.</p>
+                        <p><strong>Result:</strong> Output characteristics show slight upward slope instead of being horizontal.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q20. Advantages and Disadvantages. <span class="marks">3 Marks</span></h3>
+                    <div class="answer">
+                        <p><strong>BJT Advantages:</strong></p>
+                        <ul>
+                            <li>High current handling capacity</li>
+                            <li>Better for analog/linear applications</li>
+                            <li>Lower cost</li>
+                            <li>Higher transconductance</li>
+                        </ul>
+                        
+                        <p><strong>BJT Disadvantages:</strong></p>
+                        <ul>
+                            <li>Lower input impedance</li>
+                            <li>Temperature sensitive</li>
+                            <li>Slower switching speed</li>
+                            <li>Requires continuous base current</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FOOTER -->
+            <div style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 30px; text-align: center; margin-top: 40px; border-radius: 10px;">
+                <h3 style="margin-bottom: 10px;">Exam Preparation Complete!</h3>
+                <p style="font-size: 1.1em;">Total Questions: 20 | Total Marks: 60</p>
+                <p style="margin-top: 15px; font-size: 0.95em; opacity: 0.9;">
+                    Study Focus: Diode characteristics, BJT configurations, Operating modes, Problem solving<br>
+                    Good Luck for Your Final Exam!
+                </p>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
