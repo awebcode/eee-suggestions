@@ -131,18 +131,15 @@
             font-size: 0.9em;
             word-break: break-word;
         }
-        .svg-container {
-            text-align: center;
-            margin: 15px 0;
-            background: white;
-            padding: 15px 5px;
-            border-radius: 8px;
-            border: 1px solid #d1fae5;
-            overflow-x: auto;
-        }
+        .svg-container img,
         .svg-container svg {
             max-width: 100%;
             height: auto;
+            max-height: 380px; /* Reasonable max height for diagrams in assignments */
+            width: auto;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
         }
         .highlight {
             background: #fef3c7;
@@ -277,7 +274,7 @@
                     <div class="answer">
                         <p><strong>Definition:</strong> A diode is a two-terminal semiconductor device that allows current to flow in only one direction (unidirectional conduction). It acts as an electronic check valve.</p>
                         <div class="svg-container">
-                          <img src="https://res.cloudinary.com/rs-designspark-live/image/upload/c_limit,w_416/f_auto/v1/article/c1_3d158a3221d98c76c39f7fce5412eeaa2661e943" alt="Diode symbol" />
+                          <img src="https://media.geeksforgeeks.org/wp-content/uploads/20250618150102221873/What-is-Diode_.webp" alt="Diode symbol" />
                         </div>
                     </div>
                 </div>
