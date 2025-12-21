@@ -169,6 +169,24 @@
             font-weight: bold;
             margin-left: 5px;
         }
+
+        /* --- Image Container for Questions --- */
+.image-container {
+    text-align: center; /* Centers the image inside the container */
+    margin: 20px 0;     /* Adds space above and below the container */
+    background-color: var(--white); /* Uses the same white background as other elements */
+    padding: 15px;      /* Adds some inner space around the image */
+    border-radius: 10px; /* Matches the rounded corners of other components */
+    border: 1px solid #e0e0e0; /* Subtle border for definition */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Adds a slight shadow for depth */
+}
+
+.image-container img {
+    width: 100%;       /* Makes the image responsive to container width */
+    height: auto;      /* Maintains the image's aspect ratio */
+    display: block;    /* Removes extra space below the image */
+    border-radius: 5px; /* Slightly rounds the image corners */
+}
         
         /* Mobile responsive styles */
         @media (max-width: 768px) {
@@ -869,6 +887,29 @@
                     </div>
                 </div>
             </div>
+
+              <!-- This is how you display your image -->
+               <div class="section">
+                <h2 class="section-title">Most important qs by teacher in the class</h2>
+        <div class="image-container">
+            <!-- Replace 'path/to/your/images/eee-1.jpg' with the actual path to your image -->
+            <img src="/eee-1.jpg" alt="A diagram of a full-wave bridge rectifier circuit">
+        </div>
+
+             <div class="image-container">
+            <!-- Replace 'path/to/your/images/eee-1.jpg' with the actual path to your image -->
+            <img src="/eee-2.jpg" alt="A diagram of a full-wave bridge rectifier circuit">
+        </div>
+
+               <div class="image-container">
+            <!-- Replace 'path/to/your/images/eee-1.jpg' with the actual path to your image -->
+            <img src="/eee-3.jpg" alt="A diagram of a full-wave bridge rectifier circuit">
+        </div>
+               <div class="image-container">
+            <!-- Replace 'path/to/your/images/eee-1.jpg' with the actual path to your image -->
+            <img src="/eee-4.jpg" alt="A diagram of a full-wave bridge rectifier circuit">
+        </div>
+ </div>
             
             <!-- FOOTER -->
             <div style="background: linear-gradient(135deg, #059669 0%, #047857 100%); color: white; padding: 20px 15px; text-align: center; margin-top: 30px; border-radius: 8px;">
