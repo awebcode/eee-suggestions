@@ -172,19 +172,24 @@
             display: inline-block;
         }
 
-        .svg-container {
-            text-align: center;
-            margin: 20px 0;
-            background: var(--white);
-            padding: 15px;
-            border-radius: 10px;
-            border: 1px solid #e0e0e0;
-        }
+       
 
-        .svg-container svg {
-            max-width: 100%;
-            height: auto;
-        }
+.svg-container {
+    text-align: center;
+    margin: 20px 0;
+    background: var(--white);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+}
+
+/* --- UPDATED SVG STYLE --- */
+.svg-container svg {
+    width: 100%;       /* Force SVG to take full container width */
+    height: auto;      /* Maintain aspect ratio */
+    display: block;    /* Remove extra space below the SVG */
+}
+
 
         .highlight {
             background: #fef3c7;
