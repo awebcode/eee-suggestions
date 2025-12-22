@@ -555,32 +555,60 @@
                     </div>
                 </div>
                 
-                <div class="question">
-                    <h3>Q14. Given: β = 50, VCC = 12V, RB = 240 kΩ, RC = 2.2 kΩ (Silicon). Find IB, IC, VCE, VB, VC, VBC.<span class="marks">8 Marks</span></h3>
-                    <div class="answer">
-                        <div class="svg-container">
-                           <img src="/bjt.jpg" alt="bjt circuit" />
-                        </div>
-                        <p><strong>Given:</strong> β = 50, VCC = 12V, RB = 240 kΩ, RC = 2.2 kΩ, VBE = 0.7V (Silicon)</p>
-                        <p><strong>Solution:</strong></p>
-                        <p><strong>Step 1: Find Base Current (IB)</strong></p>
-                        <div class="formula">VCC = IB × RB + VBE</div>
-                        <div class="formula">IB = (VCC - VBE) / RB = (12 - 0.7) / 240×10³ = 11.3 / 240000 = 47.08 µA ≈ 47 µA</div>
-                        <p><strong>Step 2: Find Collector Current (IC)</strong></p>
-                        <div class="formula">IC = β × IB = 50 × 47×10⁻⁶ = 2.35 mA</div>
-                        <p><strong>Step 3: Find Collector-Emitter Voltage (VCE)</strong></p>
-                        <div class="formula">VCE = VCC - IC × RC = 12 - (2.35×10⁻³ × 2.2×10³) = 12 - 5.17 = 6.83V</div>
-                        <p><strong>Step 4: Find Base Voltage (VB)</strong></p>
-                        <div class="formula">VB = VBE + VE = 0.7 + 0 = 0.7V</div>
-                        <p><strong>Step 5: Find Collector Voltage (VC)</strong></p>
-                        <div class="formula">VC = VCE + VE = 6.83 + 0 = 6.83V</div>
-                        <p><strong>Step 6: Find Base-Collector Voltage (VBC)</strong></p>
-                        <div class="formula">VBC = VB - VC = 0.7 - 6.83 = -6.13V</div>
-                        <div class="note">
-                            <strong>Final Answers:</strong> IB = 47 µA, IC = 2.35 mA, VCE = 6.83V, VB = 0.7V, VC = 6.83V, VBC = -6.13V (Reverse biased, confirms active mode)
-                        </div>
-                    </div>
-                </div>
+               <div class="question">
+  <h3>
+    Q14. Given: β = 50, VCC = 12V, RB = 240 kΩ, RC = 2.2 kΩ (Silicon).
+    Find IB, IC, VCE, VB, VC, VBC.
+    <span class="marks">8 Marks</span>
+  </h3>
+
+  <div class="answer">
+    <div class="svg-container">
+      <img src="/bjt.jpg" alt="bjt circuit" />
+    </div>
+
+    <p><strong>Given:</strong> β = 50, VCC = 12V, RB = 240 kΩ, RC = 2.2 kΩ</p>
+    <p><strong>Assume:</strong> Silicon transistor ⇒ VBE = 0.7V, VE = 0</p>
+
+    <p><strong>Step 1: Base Current (IB)</strong></p>
+    <div class="formula">
+      IB = (VCC − VBE) / RB = (12 − 0.7) / 240kΩ = 47 µA
+    </div>
+
+    <p><strong>Step 2: Collector Current (IC)</strong></p>
+    <div class="formula">
+      IC = β × IB = 50 × 47 µA = 2.35 mA
+    </div>
+
+    <p><strong>Step 3: Collector Voltage (VC)</strong></p>
+    <div class="formula">
+      VC = VCC − IC × RC = 12 − (2.35 mA × 2.2 kΩ) = 6.83 V
+    </div>
+
+    <p><strong>Step 4: Collector-Emitter Voltage (VCE)</strong></p>
+    <div class="formula">
+      VCE = VC − VE = 6.83 − 0 = 6.83 V
+    </div>
+
+    <p><strong>Step 5: Base Voltage (VB)</strong></p>
+    <div class="formula">
+      VB = VBE + VE = 0.7 V
+    </div>
+
+    <p><strong>Step 6: Base-Collector Voltage (VBC)</strong></p>
+    <div class="formula">
+      VBC = VB − VC = 0.7 − 6.83 = −6.13 V
+    </div>
+
+    <div class="note">
+      <strong>Final Answers:</strong><br />
+      IB = 47 µA, IC = 2.35 mA, VC = 6.83 V,<br />
+      VCE = 6.83 V, VB = 0.7 V, VBC = −6.13 V<br />
+      <em>(VBC negative ⇒ transistor operates in active region)</em>
+    </div>
+  </div>
+</div>
+
                 
                 <div class="question">
                     <h3>Q15. Additional Important Formulas.<span class="marks">2 Marks</span></h3>
@@ -643,13 +671,7 @@
                     </div>
                 </div>
                 
-                <div class="question">
-                    <h3>Q19. Early Effect in BJT.<span class="marks">2 Marks</span></h3>
-                    <div class="answer">
-                        <p>As VCE increases, collector-base depletion width increases, reducing effective base width. This causes IC to increase slightly with VCE even in active region.</p>
-                        <p><strong>Result:</strong> Output characteristics show slight upward slope instead of being horizontal.</p>
-                    </div>
-                </div>
+               
                 
                 <div class="question">
                     <h3>Q20. Advantages and Disadvantages.<span class="marks">3 Marks</span></h3>
